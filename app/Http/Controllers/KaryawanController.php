@@ -10,9 +10,20 @@ class KaryawanController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $karyawans = Karyawan::paginate(5);
+        $search = $request->input('search');
+        $query = Karyawan::query();
+        if (!empty($search)){
+        $query->where(function($q) use ($search){
+        $q->where('id', 'LIKE', "{$search}")->orwhere('nip', 'LIKE', "{$search}")
+        ->orwhere('nama', 'LIKE', "{$search}")->orwhere('divisi', 'LIKE', "{$search}")
+        ->orwhere('jabatan', 'LIKE', "{$search}")->orwhere('gaji', 'LIKE', "{$search}")
+        ->orwhere('tanggal_masuk', 'LIKE', "{$search}")->orwhere('keterangan', 'LIKE', "{$search}")
+        ->paginate(5)->withQueryString();
+        });
+        };
+        $karyawans = $query->paginate(5)->withQueryString();
         return view('karyawan.index', compact('karyawans'));
     }
 

@@ -18,6 +18,11 @@
              </div>
         }
         @endif
+    <form action="{{ route('karyawan.index') }}" method="POST">
+        @csrf
+        <input type="text" name="search" class="form-control" value="{{ request('search') }}" placeholder="cari karyawan...">
+        <button type="submit" href="{{ route('karyawan.index') }}" class="btn btn-success">Cari</button> 
+    </form>
     <div class="table-responsive">
     <table border="1" cellpadding="10" class="table table-striped table-responsive">
         <thead>

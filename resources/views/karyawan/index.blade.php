@@ -48,6 +48,9 @@
         </tbody>
         
     </table>
+    <div class="d-flex justify-content-center mt-4">
+        {!! $karyawans->links() !!}
+    </div>
 </body>
 </html>
 @endsection

@@ -12,12 +12,11 @@
     <h1>Data Karyawan</h1>
     <a href="{{ route('karyawan.create') }}" class="btn btn-primary mb-4">Tambah Karyawan</a> 
    
-        @if(session('success')){
+        @session('success')
              <div class="alert alert-success">
                 {{ session('success') }}
              </div>
-        }
-        @endif
+        @endsession
     <form action="{{ route('karyawan.index') }}" method="GET" class="mb-4 d-flex">
         @csrf
         <input type="text" name="search" class="form-control" value="{{ request('search') }}" placeholder="cari karyawan...">

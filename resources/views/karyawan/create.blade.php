@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,9 +37,10 @@
         </div>
         <div class="mb-3">
             <label for="keterangan" class"form-label">Keterangan</label>
-            <textarea class="form-control" id="keterangan" name="keterangan" required></textarea>
+            <textarea class="form-control" id="keterangan" name="keterangan"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
     </form>
 </body>
 </html>
+@endsection

@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="light">
+<nav class="navbar navbar-expand-lg bg-dark text-light" data-bs-theme="light">
     <div class="container">
         <div class="navbar0-brand">Manajemen Karyawan</div>
         <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navbarTop">

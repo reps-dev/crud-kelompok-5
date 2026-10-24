@@ -11,7 +11,7 @@
     
     <h1>Data Karyawan</h1>
     <a href="{{ route('karyawan.create') }}" class="btn btn-primary">Tambah Karyawan</a> 
-    <table border="1" cellpadding="10">
+    <table border="1" cellpadding="10" class="table table-striped table-responsive">
         <thead>
         <th>ID</th>
         <th>NIP</th>

@@ -43,7 +43,7 @@
             <td>{{ $karyawan->nama}}</td>
             <td>{{ $karyawan->divisi}}</td>
             <td>{{ $karyawan->jabatan}}</td>
-            <td>RP.{{ number_format($karyawan->gaji,0 ,',', '.')}},</td>
+            <td>RP.{{ number_format($karyawan->gaji, 0 ,',', '.')}}</td>
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
             <td class="d-flex gap-2">

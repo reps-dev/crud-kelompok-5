@@ -8,7 +8,7 @@
 <body>
     <a href="{{ route('karyawan.create') }}" class="btn btn-primary" 
     <h1>Data Karyawan</h1>
-    <table border="1" collspadding="10">
+    <table border="1" cellspadding="10">
         <thead>
         <th>ID</th>
         <th>NIP</th>
@@ -32,8 +32,7 @@
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
             <td>
-                <a href="/detail" class='btn btn-warning'>Edit</a>
-                <a href="/edit" class='btn btn-warning'>Edit</a>
+                <a href="{{ route('karyawan.edit', $karyawan->id) }}" class='btn btn-warning'>Edit</a>
             </td>
             </tr>
             @endforeach

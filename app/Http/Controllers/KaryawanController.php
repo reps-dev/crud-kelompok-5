@@ -54,7 +54,7 @@ class KaryawanController extends Controller
      */
     public function edit(Karyawan $karyawan)
     {
-        //
+        return view("karyawan.edit", compact('karyawan'));
     }
 
     /**
@@ -62,7 +62,16 @@ class KaryawanController extends Controller
      */
     public function update(Request $request, Karyawan $karyawan)
     {
-        //
+        $request->validate([
+            'nip' => 'required|unique:karyawans,nip,' . $karyawan->id,
+            'nama'=> 'required',
+            'divisi' => 'required',
+            'gaji' => 'required|numeric',
+            'tanggal_masuk'=> 'required|date',
+            'keterangan'=> 'required|nullable'
+        ]);
+        $karyawan->update($request->all());
+        return redirect()->route('karyawan.index')->with('Succes', 'Karyawan berhasil diperbarui');
     }
 
     /**

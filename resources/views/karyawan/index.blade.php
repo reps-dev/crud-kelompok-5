@@ -10,7 +10,7 @@
 <body>
     
     <h1>Data Karyawan</h1>
-    <a href="{{ route('karyawan.create') }}" class="btn btn-primary">Tambah Karyawan</a> 
+    <a href="{{ route('karyawan.create') }}" class="btn btn-primary mb-4">Tambah Karyawan</a> 
     <table border="1" cellpadding="10" class="table table-striped table-responsive">
         <thead>
         <th>ID</th>
@@ -34,8 +34,8 @@
             <td>RP.{{ number_format($karyawan->gaji,0 ,',', '.')}},</td>
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
-            <td class="d-flex">
-                <a href="{{ route('karyawan.show', $karyawan->id) }}" class='btn btn-warning'>Detail</a>
+            <td class="d-flex gap-2">
+                <a href="{{ route('karyawan.show', $karyawan->id) }}" class='btn btn-secondary'>Detail</a>
                 <a href="{{ route('karyawan.edit', $karyawan->id) }}" class='btn btn-warning'>Edit</a>
                 <form action="{{ route('karyawan.destroy', $karyawan->id) }}" method="POST">
                 @csrf

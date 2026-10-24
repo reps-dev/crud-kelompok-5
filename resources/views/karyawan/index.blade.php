@@ -47,8 +47,8 @@
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
             <td class="d-flex gap-2">
-                <a href="{{ route('karyawan.show', $karyawan->id) }}" class='btn btn-secondary'>Detail</a>
-                <a href="{{ route('karyawan.edit', $karyawan->id) }}" class='btn btn-warning'>Edit</a>
+                <a href="{{ route('karyawan.show', $karyawan->id) }}" class='btn btn-secondary btn-sm'>Detail</a>
+                <a href="{{ route('karyawan.edit', $karyawan->id) }}" class='btn btn-warning btn-sm'>Edit</a>
                 <form action="{{ route('karyawan.destroy', $karyawan->id) }}" method="POST">
                 @csrf
                 @method('DELETE')

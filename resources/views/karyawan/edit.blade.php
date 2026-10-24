@@ -1,4 +1,4 @@
-@extends('laypouts.main')
+@extends('layouts.main')
 @section('content')
 
 <!DOCTYPE html>

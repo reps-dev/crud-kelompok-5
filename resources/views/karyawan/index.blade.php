@@ -1,3 +1,38 @@
-<div>
-    <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+</head>
+<body>
+    <h1>Data Karyawan</h1>
+    <table border="1" collspadding="10">
+        <thead>
+        <th>ID</th>
+        <th>NIP</th>
+        <th>nama</th>
+        <th>Divisi</th>
+        <th>Jabatan</th>
+        <th>Gaji</th>
+        <th>Tanggal Masuk</th>
+        <th>Keterangan</th>
+        </thead>
+        <tbody>
+            <tr>
+            @foreach ($karyawans as $karyawan)
+            <td>{{ $karyawan->id}}</td>
+            <td>{{ $karyawan->nip}}</td>
+            <td>{{ $karyawan->nama}}</td>
+            <td>{{ $karyawan->divisi}}</td>
+            <td>{{ $karyawan->jabatan}}</td>
+            <td>RP.{{ number_format($karyawan->gaji,0 ,',', '.')}},</td>
+            <td>{{ $karyawan->tanggal_masuk}}</td>
+            <td>{{ $karyawan->keterangan}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+        
+    </table>
+</body>
+</html>

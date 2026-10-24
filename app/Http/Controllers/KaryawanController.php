@@ -49,7 +49,7 @@ class KaryawanController extends Controller
             'keterangan'=> 'nullable'
         ]);
         Karyawan::create($request->all());
-        return redirect()->route('karyawan.index')->with('succes', 'Karyawan berhasil ditambahkan');
+        return redirect()->route('karyawan.index')->with('success', 'Karyawan berhasil ditambahkan');
     }
 
     /**
@@ -83,7 +83,7 @@ class KaryawanController extends Controller
             'keterangan'=> 'nullable'
         ]);
         $karyawan->update($request->all());
-        return redirect()->route('karyawan.index')->with('succes', 'Karyawan berhasil diperbarui');
+        return redirect()->route('karyawan.index')->with('success', 'Karyawan berhasil diperbarui');
     }
 
     /**
@@ -92,6 +92,6 @@ class KaryawanController extends Controller
     public function destroy(Karyawan $karyawan)
     {
         $karyawan->delete();
-        return redirect()->route('karyawan.index')->with('succes', 'Karyawan berhasil dihapus');
+        return redirect()->route('karyawan.index')->with('success', 'Karyawan berhasil dihapus');
     }
 }

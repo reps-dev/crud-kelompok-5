@@ -34,7 +34,7 @@
             <td>RP.{{ number_format($karyawan->gaji,0 ,',', '.')}},</td>
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
-            <td>
+            <td class="d-flex">
                 <a href="{{ route('karyawan.show', $karyawan->id) }}" class='btn btn-warning'>Detail</a>
                 <a href="{{ route('karyawan.edit', $karyawan->id) }}" class='btn btn-warning'>Edit</a>
                 <form action="{{ route('karyawan.destroy', $karyawan->id) }}" method="POST">

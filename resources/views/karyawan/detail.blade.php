@@ -9,8 +9,8 @@
 </head>
 <body>
     <h1>Detail karyawan</h1>
-    <div class="container d-flex mt-4" style="width: 100vw; min-height: 100vh; ">
-        <div class="content border-black-1px fs-2" style="width: 100vw; height: 200px;">
+    <div class="container d-flex mt-4 ">
+        <div class="content fs-3" style="width: 100vw; height: 200px;">
             @foreach ($karyawans as $karyawan )
             <p><strong>NIP :</strong>{{$karyawan->nip}}</p>
             <p><strong>Nama :</strong>{{$karyawan->nama}}</p>

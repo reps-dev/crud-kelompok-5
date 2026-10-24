@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="{{ asset('/style.css') }}">
 </head>
 <body>
+    <div class="d-flex flex-column min-vh-100">
     @include('layouts.navbar')
-    <div class='container mt-4'>
+    <div class='container mt-4 flex-grow-1'>
         @yield('content')
     </div>
     @include('layouts.footer')
+</div>
     <script src="{{ asset('dist/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

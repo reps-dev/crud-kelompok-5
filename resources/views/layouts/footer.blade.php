@@ -1,3 +1,7 @@
-<div>
-    <!-- The best way to take care of the future is to take care of the present moment. - Thich Nhat Hanh -->
-</div>
+<footer class="bg-dark py-3 mt-auto">
+    <div class="container text-center">
+        <small class="text-muted">
+            &copy; {{ date('Y'.''.config('app.name')) }}
+        </small>
+    </div>
+</footer>

@@ -18,7 +18,7 @@
              </div>
         }
         @endif
-    <form action="{{ route('karyawan.index') }}" method="POST">
+    <form action="{{ route('karyawan.index') }}" method="GET" class="mb-4 d-flex">
         @csrf
         <input type="text" name="search" class="form-control" value="{{ request('search') }}" placeholder="cari karyawan...">
         <button type="submit" href="{{ route('karyawan.index') }}" class="btn btn-success">Cari</button> 

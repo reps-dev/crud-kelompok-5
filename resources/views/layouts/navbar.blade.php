@@ -1,9 +1,9 @@
 
 <nav class="navbar navbar-expand-lg bg-dark text-light" data-bs-theme="light">
     <div class="container">
-        <div class="navbar0-brand">Manajemen Karyawan</div>
-        <button class="navbar-toggler" type="button" data-bs-toggler="collapse" data-bs-target="#navbarTop">
-            <span class="navbar-toggler-icon"></span>
+        <div class="navbar-brand text-white">Manajemen Karyawan</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
+            <span class="navbar-toggler-icon"style="filter: invert(1)"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTop">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -21,7 +21,7 @@ class KaryawanController extends Controller
      */
     public function create()
     {
-        //
+        return view("karyawan.create");
     }
 
     /**
@@ -29,7 +29,16 @@ class KaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nip' => 'required|unique:karyawans,nip',
+            'nama'=> 'required',
+            'divisi' => 'required',
+            'gaji' => 'required|numeric',
+            'tanggal_masuk'=> 'required|date',
+            'keterangan'=> 'required|nullable'
+        ]);
+        Karyawan::create($request->all());
+        return redirect()->route('karyawan.index')->with('Succes', 'Karyawan berhasil ditambahkan');
     }
 
     /**

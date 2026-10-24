@@ -6,6 +6,7 @@
     <title>Data Karyawan</title>
 </head>
 <body>
+    <a href="{{ route('karyawan.create') }}" class="btn btn-primary" 
     <h1>Data Karyawan</h1>
     <table border="1" collspadding="10">
         <thead>
@@ -17,6 +18,7 @@
         <th>Gaji</th>
         <th>Tanggal Masuk</th>
         <th>Keterangan</th>
+        <th>Aksi</th>
         </thead>
         <tbody>
             <tr>
@@ -29,6 +31,10 @@
             <td>RP.{{ number_format($karyawan->gaji,0 ,',', '.')}},</td>
             <td>{{ $karyawan->tanggal_masuk}}</td>
             <td>{{ $karyawan->keterangan}}</td>
+            <td>
+                <a href="/detail" class='btn btn-warning'>Edit</a>
+                <a href="/edit" class='btn btn-warning'>Edit</a>
+            </td>
             </tr>
             @endforeach
         </tbody>

@@ -11,6 +11,13 @@
     
     <h1>Data Karyawan</h1>
     <a href="{{ route('karyawan.create') }}" class="btn btn-primary mb-4">Tambah Karyawan</a> 
+   
+        @if(session('success')){
+             <div class="alert alert-success">
+                {{ session('success') }}
+             </div>
+        }
+        @endif
     <table border="1" cellpadding="10" class="table table-striped table-responsive">
         <thead>
         <th>ID</th>

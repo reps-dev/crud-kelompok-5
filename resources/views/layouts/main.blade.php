@@ -13,6 +13,6 @@
         @yield('content')
     </div>
     @include('layouts.footer')
-    <script src="{{ assets('dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('dist/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

@@ -18,6 +18,7 @@
              </div>
         }
         @endif
+    <div class="table-responsive">
     <table border="1" cellpadding="10" class="table table-striped table-responsive">
         <thead>
         <th>ID</th>
@@ -55,6 +56,7 @@
         </tbody>
         
     </table>
+</div>
     <div class="d-flex justify-content-center mt-4">
         {!! $karyawans->links() !!}
     </div>

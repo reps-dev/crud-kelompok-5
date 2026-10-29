@@ -12,7 +12,7 @@ class StoreKaryawanRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,13 @@ class StoreKaryawanRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nip' => ['required','unique:karyawans,nip'],
+            'nama'=> ['required','string'],
+            'divisi' => 'required',
+            'jabatan' => ['required', 'string'],
+            'gaji' => ['required','numeric'],
+            'tanggal_masuk'=> ['required','date'],
+            'keterangan'=> 'nullable'
         ];
     }
 }

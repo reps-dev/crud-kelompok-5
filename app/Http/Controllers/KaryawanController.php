@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Karyawan;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreKaryawanRequest;
 
 class KaryawanController extends Controller
 {
@@ -38,18 +39,9 @@ class KaryawanController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreKaryawanRequest $request)
     {
-        $validated = $request->validate([
-            'nip' => ['required','unique:karyawans,nip'],
-            'nama'=> ['required','string'],
-            'divisi' => 'required',
-            'jabatan' => ['required', 'string'],
-            'gaji' => ['required','numeric'],
-            'tanggal_masuk'=> ['required','date'],
-            'keterangan'=> 'nullable'
-        ]);
-        Karyawan::create($validated);
+        Karyawan::create($request->validated());
         return redirect()->route('karyawan.index')->with('success', 'Karyawan berhasil ditambahkan');
     }
 

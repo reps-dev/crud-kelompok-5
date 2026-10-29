@@ -74,12 +74,6 @@
         <div class="mb-3">
             <label for="keterangan" class="form-label">Keterangan</label>
             <textarea class="form-control" id="keterangan" name="keterangan" value="{{ old('keterangan') }}"></textarea>
-             @error('keterangan')
-                <div class="text" style="color: red;">
-                    {{ $message }}
-                </div>
-                
-            @enderror
         </div>
         <button type="submit" class="btn btn-primary">Tambah Karyawan</button>
     </form>

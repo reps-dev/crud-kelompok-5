@@ -40,15 +40,16 @@ class KaryawanController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nip' => 'required|unique:karyawans,nip',
-            'nama'=> 'required',
+        $validated = $request->validate([
+            'nip' => ['required','unique:karyawans,nip'],
+            'nama'=> ['required','string'],
             'divisi' => 'required',
-            'gaji' => 'required|numeric',
-            'tanggal_masuk'=> 'required|date',
+            'jabatan' => ['required', 'string'],
+            'gaji' => ['required','numeric'],
+            'tanggal_masuk'=> ['required','date'],
             'keterangan'=> 'nullable'
         ]);
-        Karyawan::create($request->all());
+        Karyawan::create($validated);
         return redirect()->route('karyawan.index')->with('success', 'Karyawan berhasil ditambahkan');
     }
 
